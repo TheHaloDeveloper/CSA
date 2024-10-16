@@ -1,13 +1,5 @@
 public class SwitchFirst {
-    String one;
-    String two;
-
-    public SwitchFirst(String one, String two) {
-        this.one = one;
-        this.two = two;
-    }
-
-    public String new_str() {
-        return two.charAt(0) + one.substring(1);
+    public static String go( String a, String b ){
+        return b.charAt(0) + a.substring(1);
     }
 }
