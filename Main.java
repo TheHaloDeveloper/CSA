@@ -4,6 +4,7 @@ public class Main {
             System.out.print(i + " ");
         }
 
+        System.out.println();
         int i = 2;
         while (i <= 50) {
             System.out.print(i + " ");
