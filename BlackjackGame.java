@@ -12,8 +12,6 @@ public class BlackjackGame {
         deck = new Deck();
         playerHand = new Card[10];
         dealerHand = new Card[10];
-        playerHandSize = 0;
-        dealerHandSize = 0;
         scanner = new Scanner(System.in);
     }
 
@@ -32,15 +30,15 @@ public class BlackjackGame {
 
     private void displayHands(boolean showDealer) {
         System.out.print("Your hand: ");
-        for (int i = 0; i < playerHandSize; i++) System.out.print(playerHand[i] + ", ");
+        for (int i = 0; i < playerHandSize; i++) System.out.print(playerHand[i] + " ");
         System.out.println("(Total: " + calculateHandValue(playerHand, playerHandSize) + ")");
 
         System.out.print("Dealer's hand: ");
         if (showDealer) {
-            for (int i = 0; i < dealerHandSize; i++) System.out.print(dealerHand[i] + ", ");
+            for (int i = 0; i < dealerHandSize; i++) System.out.print(dealerHand[i] + " ");
             System.out.println("(Total: " + calculateHandValue(dealerHand, dealerHandSize) + ")");
         } else {
-            System.out.println(dealerHand[0] + ", [Hidden]");
+            System.out.println(dealerHand[0] + " [Hidden]");
         }
     }
 

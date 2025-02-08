@@ -5,17 +5,15 @@ public class Deck {
     private int top;
 
     public Deck() {
-        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-
         cards = new Card[52];
         top = 0;
         int index = 0;
 
-        for (String suit : suits) {
+        for (int i = 0; i < 4; i++) {
             for (String rank : ranks) {
                 int value = rank.equals("Ace") ? 11 : rank.matches("[0-9]+") ? Integer.parseInt(rank) : 10;
-                cards[index++] = new Card(suit, rank, value);
+                cards[index++] = new Card(rank, value);
             }
         }
 
